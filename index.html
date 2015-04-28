@@ -3,14 +3,13 @@ layout: default
 title: Geovanni Perez @geoperez
 ---
 <div class="col-xs-6">
+    <div class="text-center">
+        <img src="https://avatars2.githubusercontent.com/u/1775792?s=140" alt="Geo Perez" class="img-circle" />
+    </div>
     <p>
         My name is <b>Geovanni Perez</b> and this is my web site. I live in Guadalajara, Mexico and
         I'm software developer. I love C# and Javascript, and I refuse to code JAVA again. I work at
-        <a href="http://www.unosquare.com">unosquare</a>.
-    </p>
-    <p>
-        You can check my
-        <a href="https://mx.linkedin.com/in/geovanniperez">LinkedIn profile</a>. BTW People call me <i>Simio</i>.
+        <a href="http://www.unosquare.com">unosquare</a>. BTW People call me <i>Simio</i>.
     </p>
     <hr />
     <div class="panel panel-default">
@@ -33,18 +32,42 @@ title: Geovanni Perez @geoperez
 </div>
 
 <div class="col-xs-6">
-    <div class="well well-sm">
-        <h3>Blog entries</h3>
-        <div class="list-group">
-            {% for post in site.posts %}
-            <a class="list-group-item" href="{{ post.url }}">
-                <strong>{{ post.title }}</strong> - {{ post.date | date: '%B %d, %Y' }}
-            </a>
-            {% endfor %}
+    <div class="panel panel-primary">
+        <div class="panel-heading">Blog entries</div>
+        <div class="panel-body">
+            <div class="list-group">
+                {% for post in site.posts %}
+                <a class="list-group-item" href="{{ post.url }}">
+                    <strong>
+                        <i class="fa fa-file-text"></i>&nbsp;{{ post.title }}
+                    </strong> - {{ post.date | date: '%B %d, %Y' }}
+                </a>
+                {% endfor %}
+            </div>
+            <div class="row">
+                {% if paginator.previous_page %}
+                <div class="col-md-4 newer-posts">
+                    <a href="{{ paginator.previous_page_path }}" class="previous">
+                        <i class="fa fa-chevron-left"></i>
+                        <span>Previous page</span>
+                    </a>
+                </div>
+                {% endif %}
+                <div class="col-md-4 page-num">
+                    <span>Page  {{ paginator.page }} of {{ paginator.total_pages }}</span>
+                </div>
+                {% if paginator.next_page %}
+                <div class="col-md-4 older-posts">
+                    <a href="{{ paginator.next_page_path }}" class="next">
+                        <span>Next page</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+            <p>
+                I have another blog <a href="http://simiogeek.blogspot.mx/">Simio Geek</a>, more random and more spanish.
+            </p>
         </div>
-        <hr />
-        <p>
-            I have another blog <a href="http://simiogeek.blogspot.mx/">Simio Geek</a>, more random and more spanish.
-        </p>
     </div>
 </div>

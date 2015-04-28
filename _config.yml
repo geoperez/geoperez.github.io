@@ -1,2 +1,5 @@
 gems:
   - jekyll-sitemap
+  
+paginate: 6
+permalink: /:title/index.html

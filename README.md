@@ -1,1 +1,1 @@
-
+My name is Geovanni Perez and this is my web site. I live in Guadalajara, Mexico and I'm software developer. I love C# and Javascript, and I refuse to code JAVA again. I work at unosquare. BTW People call me Simio.

@@ -10,45 +10,63 @@
    
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
         <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/superhero/bootstrap.min.css" rel="stylesheet">
-        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
         <link href="/assets/main.css" rel="stylesheet">
     </head>
 
-    <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Geovanni Perez</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="nav navbar-nav">
-                        <li><a href="https://github.com/geoperez">GitHub Profile</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img alt="Brand" src="https://avatars2.githubusercontent.com/u/1775792?v=3&u=1b01ec8ed7b2c8618967aa48b89232ee422be8b7&s=30" />
+                </a>
             </div>
-        </nav>
-        <div class="content-body">
-            <div class="container">
-                {{ content }}
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="https://github.com/geoperez" title="GitHub Profile">
+                            <i class="fa fa-github-square"></i><span class="sr-only">GitHub Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://stackoverflow.com/users/1096693/geo-perez" title="StackOverflow Profile">
+                            <i class="fa fa-stack-overflow"></i>
+                            <span class="sr-only">StackOverflow Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://mx.linkedin.com/in/geovanniperez" title="LinkedIn Profile">
+                            <i class="fa fa-linkedin-square"></i>
+                            <span class="sr-only">LinkedIn Profile</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    </nav>
+    <div class="content-body">
+        <div class="container">
+            {{ content }}
+        </div>
+    </div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-            ga('create', 'UA-132920-18', 'auto');
-            ga('send', 'pageview');
-        </script>
-    </body>
+        ga('create', 'UA-132920-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
 </html>
